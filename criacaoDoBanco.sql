@@ -57,6 +57,11 @@ SELECT * FROM tbl_professor;
 
 INSERT INTO tbl_aluno ( nome_aluno, nota, fk_cod_disciplina)
 	VALUES
+		("Ione Celeste", 10, 2),
+        ("Samuel Asaph", 9, 8),
+        ("André Guimarães", 7, 7),
+        ("Bruna Fortes", 6, 6),
+        ("Marilia Barbosa", 5, 4),
 		("Jesse Skinner",6, 1),
 		("Yoshi Walsh",0, 2),
 		("Eve Hampton",5, 3),
@@ -70,6 +75,10 @@ INSERT INTO tbl_aluno ( nome_aluno, nota, fk_cod_disciplina)
         
 SELECT * FROM tbl_aluno;
 
+## INNER JOIN
+SELECT A.nome_aluno, D.nome_disciplina 
+FROM tbl_aluno AS A
+JOIN tbl_disciplina AS D ON A.fk_cod_disciplina = D.codigo;
 
 		
         
